@@ -108,7 +108,7 @@ export default function QuoteRequest({ onClose, onGoToCatalog }: QuoteRequestPro
             </p>
             
             <p className="text-sm text-white/80 max-w-lg mx-auto leading-relaxed mb-8 font-semibold">
-              We have received your fastener parameters. Mr. Ashok P. Magia or one of our senior technical estimators will audit your specifications and email you a formalized commercial catalog quotation sheet within <strong>2-4 working hours</strong>.
+              We have received your fastener parameters. Mr. Mehul Magia or one of our senior technical estimators will audit your specifications and email you a formalized commercial catalog quotation sheet within <strong>2-4 working hours</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 justify-center">

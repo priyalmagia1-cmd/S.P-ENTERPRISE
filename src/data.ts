@@ -168,7 +168,7 @@ export const TIMELINE: TimelineEvent[] = [
   {
     year: '1992',
     title: 'Company Foundation',
-    description: 'S.P. Enterprise was established by the visionary head Mr. Ashok P. Magia in Mumbai with a clear mission: to provide the highest-grade industrial fasteners to the Indian manufacturing sector.'
+    description: 'S.P. Enterprise was established by the visionary head Mr. Mehul Magia in Mumbai with a clear mission: to provide the highest-grade industrial fasteners to the Indian manufacturing sector.'
   },
   {
     year: '2000',

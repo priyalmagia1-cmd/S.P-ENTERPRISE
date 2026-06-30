@@ -54,13 +54,13 @@ export default function FloatingControls() {
 
       {/* Quick Email Button */}
       <a
-        href="mailto:sales@spenterprise.in"
+        href="mailto:spenterprise2403@gmail.com"
         className="bg-accent-orange text-white p-3.5 rounded-none border-2 border-dark-charcoal shadow-none hover:shadow-[4px_4px_0px_0px_rgba(43,45,49,1)] transition-all flex items-center justify-center relative group"
         title="Email Sales Desk"
       >
         <Mail className="w-5.5 h-5.5" />
         <span className="absolute right-14 bg-white text-dark-charcoal font-black text-[9px] uppercase tracking-widest py-1 px-2.5 rounded-none border-2 border-dark-charcoal whitespace-nowrap shadow-none opacity-0 group-hover:opacity-100 transition-opacity">
-          Email sales@spenterprise.in
+          Email spenterprise2403@gmail.com
         </span>
       </a>
 

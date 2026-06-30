@@ -109,7 +109,9 @@ export default function Footer({ setActiveTab, openRfqDrawer }: FooterProps) {
             </li>
             <li className="flex items-start space-x-2">
               <Mail className="w-4 h-4 text-accent-orange shrink-0 mt-0.5" />
-              <a href="mailto:sales@spenterprise.in" className="hover:text-accent-orange transition-colors font-black">sales@spenterprise.in</a>
+              <div className="flex flex-col space-y-1">
+                <a href="mailto:spenterprise2403@gmail.com" className="hover:text-accent-orange transition-colors font-black">spenterprise2403@gmail.com</a>
+              </div>
             </li>
             <li className="flex items-start space-x-2 leading-relaxed uppercase text-[10px] font-bold">
               <MapPin className="w-4 h-4 text-accent-orange shrink-0 mt-0.5" />

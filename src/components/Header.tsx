@@ -35,14 +35,14 @@ export default function Header({ activeTab, setActiveTab, openRfqDrawer, onSearc
     <>
       {/* Top Banner Contact Details */}
       <div className="bg-dark-charcoal text-white text-xs py-2 px-4 md:px-8 flex flex-col sm:flex-row justify-between items-center border-b border-white/10 font-sans">
-        <div className="flex items-center space-x-6">
-          <a href="tel:+919969130013" className="flex items-center space-x-1 hover:text-accent-orange transition-colors">
+        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-y-2 gap-x-4 md:gap-x-6">
+          <a href="tel:+919969130013" className="flex items-center space-x-1 hover:text-accent-orange transition-colors whitespace-nowrap">
             <Phone className="w-3.5 h-3.5 text-accent-orange" />
             <span>+91 99691 30013</span>
           </a>
-          <a href="mailto:sales@spenterprise.in" className="flex items-center space-x-1 hover:text-accent-orange transition-colors">
+          <a href="mailto:spenterprise2403@gmail.com" className="flex items-center space-x-1 hover:text-accent-orange transition-colors whitespace-nowrap">
             <Mail className="w-3.5 h-3.5 text-accent-orange" />
-            <span>sales@spenterprise.in</span>
+            <span>spenterprise2403@gmail.com</span>
           </a>
         </div>
         <div className="hidden sm:flex items-center space-x-4">

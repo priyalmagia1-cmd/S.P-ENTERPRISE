@@ -64,7 +64,7 @@ function AppContent() {
   const whyChooseUsData = [
     {
       title: "34+ Years Experience",
-      desc: "Serving Indian manufacturing and infrastructure since 1992 under the expert guidance of Mr. Ashok P. Magia.",
+      desc: "Serving Indian manufacturing and infrastructure since 1992 under the expert guidance of Mr. Mehul Magia.",
       icon: Award
     },
     {

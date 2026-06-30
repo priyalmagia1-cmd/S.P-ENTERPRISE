@@ -122,15 +122,17 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <a href="mailto:sales@spenterprise.in" className="flex items-center space-x-4 hover:text-accent-orange transition-colors">
-                  <div className="bg-primary-blue/5 text-primary-blue border-2 border-primary-blue p-2.5 rounded-none shrink-0">
+                 <div className="flex items-start space-x-4">
+                  <div className="bg-primary-blue/5 text-primary-blue border-2 border-primary-blue p-2.5 rounded-none shrink-0 mt-1">
                     <Mail className="w-4.5 h-4.5 text-accent-orange" />
                   </div>
-                  <div>
-                    <p className="text-[9px] text-steel-grey font-black uppercase tracking-wider">Commercial Email Inbox</p>
-                    <p className="font-black text-dark-charcoal text-sm mt-0.5">sales@spenterprise.in</p>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[9px] text-steel-grey font-black uppercase tracking-wider mb-1">Commercial Email Inbox</p>
+                    <div className="flex flex-col space-y-1">
+                      <a href="mailto:spenterprise2403@gmail.com" className="font-black text-dark-charcoal text-sm hover:text-accent-orange transition-colors block truncate">spenterprise2403@gmail.com</a>
+                    </div>
                   </div>
-                </a>
+                </div>
 
                 <div className="flex items-center space-x-4">
                   <div className="bg-primary-blue/5 text-primary-blue border-2 border-primary-blue p-2.5 rounded-none shrink-0">

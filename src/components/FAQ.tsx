@@ -73,7 +73,7 @@ export default function FAQ() {
               Have a highly specialized structural or chemical requirement?
             </h4>
             <p className="text-xs text-white/90 max-w-xl font-sans font-semibold leading-relaxed">
-              Connect directly with our technical director, Mr. Ashok P. Magia. We will review DIN/ISO tolerances and formulate a tailored quote.
+              Connect directly with our technical director, Mr. Mehul Magia. We will review DIN/ISO tolerances and formulate a tailored quote.
             </p>
           </div>
           <a

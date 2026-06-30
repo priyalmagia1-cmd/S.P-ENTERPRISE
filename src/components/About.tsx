@@ -35,7 +35,7 @@ export default function About() {
               </div>
 
               <div className="mt-6">
-                <h3 className="text-xl font-black text-primary-blue font-heading uppercase tracking-tight">Mr. Ashok P. Magia</h3>
+                <h3 className="text-xl font-black text-primary-blue font-heading uppercase tracking-tight">Mr. Mehul Magia</h3>
                 <p className="text-xs font-extrabold text-accent-orange uppercase tracking-wider mt-1">Founder &amp; Dynamic Head</p>
                 <div className="h-0.5 w-12 bg-primary-blue/20 mx-auto my-3 rounded-none"></div>
                 <p className="text-xs text-steel-grey font-semibold italic leading-relaxed px-4">
@@ -51,7 +51,7 @@ export default function About() {
               About S.P. Enterprise
             </h3>
             <p className="text-sm sm:text-base text-steel-grey font-semibold leading-relaxed">
-              <strong>S.P. Enterprise</strong> is a pioneer organisation engaged in manufacturing, supplying, and trading a broad array of nuts, bolts, and industrial fasteners. Established in 1992 under the visionary leadership of Mr. Ashok P. Magia, the company has grown to become a premium nationwide partner for critical engineering sectors.
+              <strong>S.P. Enterprise</strong> is a pioneer organisation engaged in manufacturing, supplying, and trading a broad array of nuts, bolts, and industrial fasteners. Established in 1992 under the visionary leadership of Mr. Mehul Magia, the company has grown to become a premium nationwide partner for critical engineering sectors.
             </p>
             <p className="text-sm sm:text-base text-steel-grey font-semibold leading-relaxed">
               We cater to diverse heavy industries across India including <strong>Automobiles, Construction, Railway, Petroleum, Wind Power, Chemicals, Shipping, and Pharma</strong>. Our comprehensive product inventory ranges over <strong>50,000 fastener varieties</strong>, acknowledged to meet the highest national and international engineering standards. All raw materials are sourced exclusively from audited and certified steel vendors to assure uniform microstructures and strength profiles.
