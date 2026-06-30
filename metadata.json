@@ -1,0 +1,6 @@
+{
+  "name": "S.P. Enterprise",
+  "description": "Manufacturer, Supplier & Trader of 50,000+ Industrial Fasteners since 1992.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
