@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { Bolt, ArrowRight, ShieldCheck, Truck, Warehouse, HelpCircle } from 'lucide-react';
-import FastenerSvg from './FastenerSvg';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 
 interface HeroProps {
   onBrowseProducts: () => void;
@@ -8,16 +7,6 @@ interface HeroProps {
 }
 
 export default function Hero({ onBrowseProducts, onRequestQuote }: HeroProps) {
-  const [activeSandboxFastener, setActiveSandboxFastener] = useState('hexagon-bolts');
-
-  const fastenerList = [
-    { id: 'hexagon-bolts', name: 'Hex Bolts', desc: 'Standards: IS 1364, DIN 933. Grades up to 14.9' },
-    { id: 'nuts', name: 'Industrial Nuts', desc: 'Heavy hex, Nylock, Dom, & SA-194-2H nuts' },
-    { id: 'studs-rods', name: 'Studs & Rods', desc: 'High-temp ASTM A193 B7 stud bolts' },
-    { id: 'socket-products', name: 'Socket Cap', desc: 'High tensile 12.9 Socket screws' },
-    { id: 'washers', name: 'Lock Washers', desc: 'Wedge-lock, DTI, & spring washers' },
-  ];
-
   const stats = [
     { value: '1992', label: 'Established Year', subtitle: '34+ Years of Trust' },
     { value: '50,000+', label: 'Products & Sizes', subtitle: 'In Stock Catalog' },
@@ -37,10 +26,10 @@ export default function Hero({ onBrowseProducts, onRequestQuote }: HeroProps) {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-4xl text-left space-y-8">
           
-          {/* Hero Left Content */}
-          <div className="lg:col-span-7 space-y-8 text-left">
+          {/* Hero Content */}
+          <div className="space-y-8">
             <div className="space-y-2">
               <p className="text-accent-orange font-bold uppercase tracking-[0.25em] text-xs italic">
                 Engineering Excellence Since 1992
@@ -71,84 +60,6 @@ export default function Hero({ onBrowseProducts, onRequestQuote }: HeroProps) {
               >
                 <span>Browse Catalogue</span>
               </button>
-            </div>
-
-            {/* Micro Highlights */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t-2 border-dark-charcoal">
-              <div className="flex items-center space-x-2">
-                <ShieldCheck className="w-5 h-5 text-accent-orange" />
-                <span className="text-[10px] font-black text-dark-charcoal uppercase tracking-widest">TÜV ISO Certified</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Truck className="w-5 h-5 text-accent-orange" />
-                <span className="text-[10px] font-black text-dark-charcoal uppercase tracking-widest">PAN India Delivery</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Warehouse className="w-5 h-5 text-accent-orange" />
-                <span className="text-[10px] font-black text-dark-charcoal uppercase tracking-widest">500+ Tons Stock</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Hero Right Interactive CAD Fastener Sandbox */}
-          <div className="lg:col-span-5 flex flex-col items-center">
-            <div className="w-full bg-white rounded-none border-4 border-primary-blue p-6 relative group overflow-hidden shadow-[8px_8px_0px_0px_rgba(11,79,138,0.15)]">
-              {/* Technical drawing aesthetic background corners */}
-              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary-blue/25"></div>
-              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary-blue/25"></div>
-              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary-blue/25"></div>
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary-blue/25"></div>
-
-              {/* Dynamic Svg Display Area */}
-              <div className="w-full h-64 flex items-center justify-center bg-white rounded-none border border-light-grey py-4 relative overflow-hidden">
-                {activeSandboxFastener === 'hexagon-bolts' ? (
-                  <div className="w-full h-full relative flex items-center justify-center p-2 bg-white">
-                    <img
-                      src="/src/assets/images/regenerated_image_1783145024175.png"
-                      alt="Black Hexagon Bolts"
-                      className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-                ) : (
-                  <FastenerSvg 
-                    type={activeSandboxFastener} 
-                    className="w-48 h-48 text-primary-blue transition-all duration-300 transform group-hover:scale-105" 
-                    strokeWidth={1.5}
-                  />
-                )}
-              </div>
-
-              {/* Fastener Selector list */}
-              <div className="mt-6 space-y-3">
-                <p className="text-[10px] font-black text-steel-grey uppercase tracking-widest text-left">
-                  Interactive Fastener Showcase
-                </p>
-                <div className="grid grid-cols-5 gap-1">
-                  {fastenerList.map((f) => (
-                    <button
-                      key={f.id}
-                      onClick={() => setActiveSandboxFastener(f.id)}
-                      className={`py-2.5 rounded-none font-heading text-[10px] font-extrabold uppercase tracking-wider border transition-all ${
-                        activeSandboxFastener === f.id
-                          ? 'bg-primary-blue text-white border-primary-blue font-black'
-                          : 'bg-white text-dark-charcoal hover:bg-light-grey border-light-grey'
-                      }`}
-                    >
-                      {f.name.split(' ')[0]}
-                    </button>
-                  ))}
-                </div>
-                {/* Active info card */}
-                <div className="bg-primary-blue/5 rounded-none p-3 text-left border border-primary-blue/15">
-                  <p className="text-[11px] font-black text-primary-blue uppercase tracking-wider">
-                    {fastenerList.find(f => f.id === activeSandboxFastener)?.name} SPECIFICATIONS
-                  </p>
-                  <p className="text-xs font-semibold text-steel-grey mt-0.5">
-                    {fastenerList.find(f => f.id === activeSandboxFastener)?.desc}
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
 
