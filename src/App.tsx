@@ -352,12 +352,33 @@ function CatalogAutoOpenSpec({ data, onClear, onGoToContact }: {
         <div className="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           <div className="lg:col-span-7 space-y-6">
-            <div className="bg-light-grey/40 rounded-xl border border-light-grey p-8 flex flex-col items-center justify-center min-h-[220px]">
-              {/* Small schematic drawing */}
-              <span className="text-6xl text-primary-blue font-extrabold select-none opacity-20">⚙</span>
-              <p className="text-[10px] font-mono text-steel-grey mt-4 uppercase">
-                Schematic Projection [ID: {data.product.id.toUpperCase()}]
-              </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Real Product Photo */}
+              {data.product.imageUrl && (
+                <div className="bg-light-grey/40 rounded-xl border border-light-grey p-4 flex flex-col items-center justify-center min-h-[220px]">
+                  <div className="w-full h-36 rounded-xl border border-light-grey overflow-hidden bg-white">
+                    <img
+                      src={data.product.imageUrl}
+                      alt={data.product.name}
+                      className="w-full h-full object-cover"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                  <p className="text-[10px] font-bold text-steel-grey mt-2 uppercase tracking-widest text-center">
+                    Actual Product Photograph
+                  </p>
+                </div>
+              )}
+
+              {/* Schematic Projection */}
+              <div className="bg-light-grey/40 rounded-xl border border-light-grey p-4 flex flex-col items-center justify-center min-h-[220px]">
+                <div className="h-36 flex items-center justify-center">
+                  <span className="text-6xl text-primary-blue font-extrabold select-none opacity-20">⚙</span>
+                </div>
+                <p className="text-[10px] font-bold text-steel-grey mt-2 uppercase tracking-widest text-center">
+                  Schematic Projection [ID: {data.product.id.toUpperCase()}]
+                </p>
+              </div>
             </div>
 
             {/* Spec tables */}

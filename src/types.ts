@@ -22,6 +22,7 @@ export interface ProductItem {
   specs: Specification;
   type?: string;
   images?: string[]; // We will draw highly detailed SVG icons dynamically
+  imageUrl?: string;
   features?: string[];
   applications?: string[];
 }

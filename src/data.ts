@@ -225,7 +225,7 @@ export const FAQS: FAQItem[] = [
   }
 ];
 
-export const CATALOG: ProductCategory[] = [
+const BASE_CATALOG: ProductCategory[] = [
   {
     id: 'hexagon-bolts',
     name: 'Hexagon Bolts',
@@ -622,3 +622,39 @@ export const CATALOG: ProductCategory[] = [
     ]
   }
 ];
+
+const PRODUCT_IMAGES: Record<string, string> = {
+  'hb-01': '/src/assets/images/regenerated_image_1783047086891.jpg',
+  'hb-02': 'https://images.unsplash.com/photo-1542156822-6924d1a71aba?auto=format&fit=crop&w=600&q=80',
+  'hb-03': 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
+  'st-01': 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80',
+  'st-02': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80',
+  'nt-01': 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=600&q=80',
+  'nt-02': 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80',
+  'nt-03': 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=600&q=80',
+  'nt-04': 'https://images.unsplash.com/photo-1534224039826-c7a0dea0e66a?auto=format&fit=crop&w=600&q=80',
+  'sp-01': 'https://images.unsplash.com/photo-1590534247854-e97d5e3feef6?auto=format&fit=crop&w=600&q=80',
+  'sp-02': 'https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=600&q=80',
+  'sp-03': 'https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=600&q=80',
+  'ws-01': 'https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80',
+  'ws-02': 'https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80',
+  'ss-01': 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80',
+  'ss-02': 'https://images.unsplash.com/photo-1611244419377-b0a78db53e3d?auto=format&fit=crop&w=600&q=80',
+  'af-01': 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80',
+  'af-02': 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80',
+  'ni-01': 'https://images.unsplash.com/photo-1582921017967-79d1cb17e359?auto=format&fit=crop&w=600&q=80',
+  'sc-01': 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=600&q=80',
+  'sc-02': 'https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=600&q=80',
+  'ot-01': 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?auto=format&fit=crop&w=600&q=80',
+  'ih-01': 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80',
+  'tb-01': 'https://images.unsplash.com/photo-1513828742140-ccaa34f3168a?auto=format&fit=crop&w=600&q=80',
+  'tb-02': 'https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80'
+};
+
+export const CATALOG: ProductCategory[] = BASE_CATALOG.map(category => ({
+  ...category,
+  products: category.products.map(product => ({
+    ...product,
+    imageUrl: PRODUCT_IMAGES[product.id] || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+  }))
+}));

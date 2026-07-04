@@ -99,19 +99,24 @@ export default function Hero({ onBrowseProducts, onRequestQuote }: HeroProps) {
               <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary-blue/25"></div>
               <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary-blue/25"></div>
 
-              {/* Header inside Sandbox */}
-              <div className="flex justify-between items-center pb-4 border-b border-light-grey mb-4 font-mono text-[10px] text-steel-grey font-bold">
-                <span>CAD MODEL VIEWER [REV-1992]</span>
-                <span className="text-accent-orange animate-pulse">● MODEL COUPLERS ACTIVE</span>
-              </div>
-
               {/* Dynamic Svg Display Area */}
-              <div className="h-64 flex items-center justify-center bg-light-grey rounded-none border border-light-grey py-8">
-                <FastenerSvg 
-                  type={activeSandboxFastener} 
-                  className="w-48 h-48 text-primary-blue transition-all duration-300 transform group-hover:scale-105" 
-                  strokeWidth={1.5}
-                />
+              <div className="w-full h-64 flex items-center justify-center bg-white rounded-none border border-light-grey py-4 relative overflow-hidden">
+                {activeSandboxFastener === 'hexagon-bolts' ? (
+                  <div className="w-full h-full relative flex items-center justify-center p-2 bg-white">
+                    <img
+                      src="/src/assets/images/regenerated_image_1783047086891.jpg"
+                      alt="Black Hexagon Bolts"
+                      className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                ) : (
+                  <FastenerSvg 
+                    type={activeSandboxFastener} 
+                    className="w-48 h-48 text-primary-blue transition-all duration-300 transform group-hover:scale-105" 
+                    strokeWidth={1.5}
+                  />
+                )}
               </div>
 
               {/* Fastener Selector list */}

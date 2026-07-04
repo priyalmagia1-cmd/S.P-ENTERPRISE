@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuote } from '../context/QuoteContext';
 import { Bolt, Phone, Mail, MapPin } from 'lucide-react';
+import LogoSvg from './LogoSvg';
 
 interface FooterProps {
   setActiveTab: (tab: string) => void;
@@ -22,8 +23,8 @@ export default function Footer({ setActiveTab, openRfqDrawer }: FooterProps) {
         {/* Company Info column */}
         <div className="space-y-4">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleTabClick('home')}>
-            <div className="bg-primary-blue text-white w-10 h-10 rounded-none flex items-center justify-center font-black text-xl border-2 border-accent-orange">
-              S
+            <div className="border border-white/10 shadow-md overflow-hidden hover:scale-105 transition-transform duration-200 bg-white">
+              <LogoSvg className="w-12 h-14" />
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-black font-heading tracking-tighter leading-none text-white">

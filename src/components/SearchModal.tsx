@@ -83,11 +83,22 @@ export default function SearchModal({ onClose, onSelectProduct }: SearchModalPro
                     onSelectProduct(product, category);
                     onClose();
                   }}
-                  className="w-full text-left p-3 rounded-xl hover:bg-light-grey flex items-start space-x-3 transition-colors group"
+                  className="w-full text-left p-3 rounded-none hover:bg-light-grey flex items-start space-x-3 transition-colors group border border-transparent hover:border-dark-charcoal"
                 >
-                  <div className="bg-primary-blue/5 text-primary-blue border border-primary-blue/10 p-2 rounded-lg shrink-0 group-hover:bg-primary-blue/15 transition-colors">
-                    <Bolt className="w-4 h-4 text-accent-orange" />
-                  </div>
+                  {product.imageUrl ? (
+                    <div className="w-12 h-12 rounded-none border border-dark-charcoal overflow-hidden shrink-0 bg-white">
+                      <img
+                        src={product.imageUrl}
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  ) : (
+                    <div className="bg-primary-blue/5 text-primary-blue border border-primary-blue/10 p-2 rounded-lg shrink-0 group-hover:bg-primary-blue/15 transition-colors">
+                      <Bolt className="w-4 h-4 text-accent-orange" />
+                    </div>
+                  )}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between">
                       <p className="text-sm font-bold text-primary-blue font-heading truncate">

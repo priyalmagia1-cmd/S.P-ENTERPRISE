@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useQuote } from '../context/QuoteContext';
 import { Bolt, Menu, X, ShoppingCart, Search, Phone, Mail, FileText } from 'lucide-react';
+import LogoSvg from './LogoSvg';
 
 interface HeaderProps {
   activeTab: string;
@@ -60,9 +61,9 @@ export default function Header({ activeTab, setActiveTab, openRfqDrawer, onSearc
             onClick={() => handleTabClick('home')} 
             className="flex items-center space-x-3 cursor-pointer group"
           >
-            {/* Bold Typography Style Solid Square Logo */}
-            <div className="bg-primary-blue text-white w-11 h-11 rounded-none flex items-center justify-center font-black text-2xl shadow-sm group-hover:bg-primary-blue-hover transition-colors border-2 border-accent-orange">
-              SP
+            {/* Real elegant serif interlaced SP Monogram Logo */}
+            <div className="border border-dark-charcoal/10 shadow-md overflow-hidden group-hover:scale-105 transition-transform duration-200 bg-white">
+              <LogoSvg className="w-14 h-17" />
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-black text-primary-blue tracking-tighter font-heading flex items-center uppercase">

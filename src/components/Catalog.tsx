@@ -214,9 +214,21 @@ export default function Catalog({ initialCategoryId = 'all', onGoToContact }: Ca
                         className="bg-white rounded-none border-2 border-dark-charcoal p-5 text-left shadow-none hover:shadow-[6px_6px_0px_0px_rgba(11,79,138,0.15)] hover:bg-light-grey/10 transition-all flex flex-col justify-between"
                       >
                         <div className="space-y-3">
-                          {/* Top part with miniature CAD visual */}
-                          <div className="flex justify-between items-start">
-                            <div className="max-w-[80%]">
+                          {/* Top part with Product Photo and Title details */}
+                          <div className="flex gap-4 items-start">
+                            {/* Product Photo */}
+                            {product.imageUrl && (
+                              <div className="w-20 h-20 shrink-0 rounded-none border-2 border-dark-charcoal overflow-hidden relative bg-light-grey/40">
+                                <img
+                                  src={product.imageUrl}
+                                  alt={product.name}
+                                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                                  referrerPolicy="no-referrer"
+                                />
+                              </div>
+                            )}
+                            
+                            <div className="flex-grow min-w-0">
                               <h3 className="text-base font-black text-primary-blue font-heading tracking-tight leading-snug uppercase">
                                 {product.name}
                               </h3>
@@ -224,8 +236,9 @@ export default function Catalog({ initialCategoryId = 'all', onGoToContact }: Ca
                                 SPEC-ID: {product.id.toUpperCase()}
                               </span>
                             </div>
-                            <div className="bg-light-grey/50 p-1.5 rounded-none border-2 border-dark-charcoal">
-                              <FastenerSvg type={category.id} className="w-10 h-10 text-primary-blue" />
+
+                            <div className="bg-light-grey/50 p-1 rounded-none border border-dark-charcoal shrink-0">
+                              <FastenerSvg type={category.id} className="w-8 h-8 text-primary-blue" />
                             </div>
                           </div>
 
@@ -304,12 +317,34 @@ export default function Catalog({ initialCategoryId = 'all', onGoToContact }: Ca
               {/* Left Column: Technical Visual + Specification Table */}
               <div className="lg:col-span-7 space-y-6">
                 
-                {/* Visual Representation box */}
-                <div className="bg-light-grey/40 rounded-none border-2 border-dark-charcoal p-8 flex flex-col items-center justify-center min-h-[220px]">
-                  <FastenerSvg type={activeCategoryOfProduct.id} className="w-40 h-40 text-primary-blue" />
-                  <p className="text-[10px] font-black text-steel-grey mt-2 uppercase tracking-widest">
-                    Vector projection schematic [ISO scale]
-                  </p>
+                {/* Visual Representation box - Dual Photo & CAD Blueprint */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {/* Real Product Photo */}
+                  {selectedProduct.imageUrl && (
+                    <div className="bg-light-grey/40 rounded-none border-2 border-dark-charcoal p-4 flex flex-col items-center justify-center min-h-[220px]">
+                      <div className="w-full h-36 rounded-none border-2 border-dark-charcoal overflow-hidden bg-white">
+                        <img
+                          src={selectedProduct.imageUrl}
+                          alt={selectedProduct.name}
+                          className="w-full h-full object-cover"
+                          referrerPolicy="no-referrer"
+                        />
+                      </div>
+                      <p className="text-[10px] font-black text-steel-grey mt-2 uppercase tracking-widest text-center">
+                        Actual Product Photograph
+                      </p>
+                    </div>
+                  )}
+
+                  {/* CAD Vector projection */}
+                  <div className="bg-light-grey/40 rounded-none border-2 border-dark-charcoal p-4 flex flex-col items-center justify-center min-h-[220px]">
+                    <div className="h-36 flex items-center justify-center">
+                      <FastenerSvg type={activeCategoryOfProduct.id} className="w-28 h-28 text-primary-blue" />
+                    </div>
+                    <p className="text-[10px] font-black text-steel-grey mt-2 uppercase tracking-widest text-center">
+                      Vector projection schematic [ISO]
+                    </p>
+                  </div>
                 </div>
 
                 {/* Specification Table */}
