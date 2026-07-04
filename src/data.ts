@@ -624,7 +624,7 @@ const BASE_CATALOG: ProductCategory[] = [
 ];
 
 const PRODUCT_IMAGES: Record<string, string> = {
-  'hb-01': '/src/assets/images/regenerated_image_1783047086891.jpg',
+  'hb-01': '/src/assets/images/regenerated_image_1783145024175.png',
   'hb-02': 'https://images.unsplash.com/photo-1542156822-6924d1a71aba?auto=format&fit=crop&w=600&q=80',
   'hb-03': 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
   'st-01': 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80',

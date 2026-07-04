@@ -104,7 +104,7 @@ export default function Hero({ onBrowseProducts, onRequestQuote }: HeroProps) {
                 {activeSandboxFastener === 'hexagon-bolts' ? (
                   <div className="w-full h-full relative flex items-center justify-center p-2 bg-white">
                     <img
-                      src="/src/assets/images/regenerated_image_1783047086891.jpg"
+                      src="/src/assets/images/regenerated_image_1783145024175.png"
                       alt="Black Hexagon Bolts"
                       className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
                       referrerPolicy="no-referrer"
